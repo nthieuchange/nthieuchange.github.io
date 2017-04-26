@@ -1,6 +1,6 @@
 $(document).ready(function () {
   // Load footer
-  $(".add-footer").load("./html/footer.html");
+  $(".add-footer").load("./footer.html");
 
   // Show charts
   $.getScript('http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js', function() {
