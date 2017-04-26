@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="Hãy để các chuyên gia của chúng tôi giải đáp các thắc mắc của bạn nhanh chóng">
+        <meta name="author" content="thacmac.vn">
+        <link rel="icon" href="../img/problem.png">
+
+        <title>ThacMac.Vn | Hệ thống hỏi và giải đáp tất cả các thắc mắc nảy sinh trong đầu của bạn</title>
+
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+	</head>
+	<body>
+		<div class="header container-fluid">
+            <nav class="navbar header-wrapper navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="logo">
+                            <a href="#">
+                                <img src="../img/logo.png" alt="thacmac.vn logo">
+                            </a>
+                        </div>
+                    </div>
+                    	<div class="dropdown account navbar-right col-xs-12 col-sm-3 col-md-2 col-lg-2">
+	                        <div class="avatar">
+	                            <img src="../img/admin.png" alt="avatar">
+	                        </div>
+	                        <a class="username dropdown-toggle" data-toggle="dropdown" href="#">Admin<b class="caret"></b></a>
+	                        <ul class="dropdown-menu col-xs-12 col-sm-12 col-md-12">
+	                            <li><a href="#">Cài đặt</a></li>
+	                            <li class="divider"></li>
+	                            <li><a href="#"><i class="fa fa-fw fa-power-off text-danger" style="margin-right: 10px;"></i>Đăng xuất</a></li>
+	                        </ul>
+	                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="admin_problem_management.html">Quản lý bài viết</a></li>
+                            <li class="active"><a href="#">Quản lý thành viên</a></li>
+                            <li><a href="admin_credit_management.html">Quản lý giao dịch</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+
+                </div><!--/.container-fluid -->
+
+
+            </nav>
+		</div>
+		<div class="wrapper container-fluid">
+			<div class="box member-table-box col-md-8 col-lg-8 col-sm-12 col-xs-12">
+				<div class="panel panel-default panel-table">
+			                   <div class="panel-heading">
+								   <div class="row">
+									   <div class="col col-xs-6">
+									       <div class="form-group pull-left">
+									           <input type="text" class="admin-search-member form-control" placeholder="Tìm kiếm">
+									       </div>
+								       </div>
+								       <div class="col col-xs-6 text-right">
+								           <div class="pull-right">
+								               <div class="btn-group" data-toggle="buttons">
+								                   <label class="btn btn-success btn-filter active" data-target="approved">
+								                       <input type="radio" name="options" id="option1" autocomplete="off" checked> Đã duyệt
+								                   </label>
+								                   <label class="btn btn-warning btn-filter" data-target="pending">
+								                       <input type="radio" name="options" id="option2" autocomplete="off"> Chờ duyệt
+								                   </label>
+								                   <label class="btn btn-default btn-filter" data-target="all">
+								                       <input type="radio" name="options" id="option3" autocomplete="off"> Tất cả
+								                   </label>
+								               </div>
+								           </div>
+								       </div>
+								   </div>
+			                   </div>
+			                   <div class="panel-body">
+			                       <table id="member-table" class="table table-striped table-bordered table-list results">
+			                           <thead>
+				                           <tr>
+				                               <th class="col-check"><input type="checkbox" id="checkall" onclick="test()"/></th>
+				                               <th class="col-tools"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+				                               </th>
+				                               <th class="col-text">Tên</th>
+				                               <th class="col-text">Email</th>
+											   <th class="col-text">Thời gian</th>
+				                           </tr>
+										   <tr class="warning no-result">
+											   <td colspan="5"><i class="fa fa-warning"></i> No result</td>
+										   </tr>
+			                           </thead>
+			                           <tbody>
+			                           <tr data-status="pending">
+			                               <td align="center"><input type="checkbox" class="checkthis"/></td>
+			                               <td align="center">
+			                                   <a class="btn btn-success"><span class="glyphicon glyphicon-check"
+			                                                                    aria-hidden="true"></span></a>
+			                                   <a class="btn btn-danger"><span class="glyphicon glyphicon-trash"
+			                                                                   aria-hidden="true"></span></a>
+			                               </td>
+										   <td><a href="#">Nguyễn Văn A</a></td>
+										   <td><a href="mailto:nva@gmail.com">nva@gmail.com</a></td>
+										   <td>1:00PM 26/04/2017</td>
+			                           </tr>
+			                           <tr data-status="pending">
+			                               <td align="center"><input type="checkbox" class="checkthis"/></td>
+			                               <td align="center">
+			                                   <a class="btn btn-success"><span class="glyphicon glyphicon-check"
+			                                                                    aria-hidden="true"></span></a>
+			                                   <a class="btn btn-danger"><span class="glyphicon glyphicon-trash"
+			                                                                   aria-hidden="true"></span></a>
+			                               </td>
+										   <td><a href="#">Nguyễn Văn B</a></td>
+										   <td><a href="mailto:nvb@gmail.com">nvb@gmail.com</a></td>
+										   <td>12:55PM 26/04/2017</td>
+			                           </tr>
+									   <tr data-status="pending">
+			                               <td align="center"><input type="checkbox" class="checkthis"/></td>
+			                               <td align="center">
+			                                   <a class="btn btn-success"><span class="glyphicon glyphicon-check"
+			                                                                    aria-hidden="true"></span></a>
+			                                   <a class="btn btn-danger"><span class="glyphicon glyphicon-trash"
+			                                                                   aria-hidden="true"></span></a>
+			                               </td>
+										   <td><a href="#">Nguyễn Văn F</a></td>
+										   <td><a href="mailto:nvf@gmail.com">nvf@gmail.com</a></td>
+										   <td>12:35PM 26/04/2017</td>
+			                           </tr>
+									   <tr data-status="pending">
+			                               <td align="center"><input type="checkbox" class="checkthis"/></td>
+			                               <td align="center">
+			                                   <a class="btn btn-success"><span class="glyphicon glyphicon-check"
+			                                                                    aria-hidden="true"></span></a>
+			                                   <a class="btn btn-danger"><span class="glyphicon glyphicon-trash"
+			                                                                   aria-hidden="true"></span></a>
+			                               </td>
+										   <td><a href="#">Nguyễn Văn G</a></td>
+										   <td><a href="mailto:nvg@gmail.com">nvg@gmail.com</a></td>
+										   <td>12:30PM 26/04/2017</td>
+			                           </tr>
+									   <tr data-status="approved">
+			                               <td align="center"><input type="checkbox" class="checkthis"/></td>
+			                               <td align="center">
+			                                   <a class="btn btn-success"><span class="glyphicon glyphicon-check"
+			                                                                    aria-hidden="true"></span></a>
+			                                   <a class="btn btn-danger"><span class="glyphicon glyphicon-trash"
+			                                                                   aria-hidden="true"></span></a>
+			                               </td>
+										   <td><a href="#">Nguyễn Văn H</a></td>
+										   <td><a href="mailto:nvh@gmail.com">nvh@gmail.com</a></td>
+										   <td>12:25PM 26/04/2017</td>
+			                           </tr>
+									   <tr data-status="approved">
+			                               <td align="center"><input type="checkbox" class="checkthis"/></td>
+			                               <td align="center">
+			                                   <a class="btn btn-success"><span class="glyphicon glyphicon-check"
+			                                                                    aria-hidden="true"></span></a>
+			                                   <a class="btn btn-danger"><span class="glyphicon glyphicon-trash"
+			                                                                   aria-hidden="true"></span></a>
+			                               </td>
+										   <td><a href="#">Nguyễn Văn I</a></td>
+										   <td><a href="mailto:nvi@gmail.com">nvi@gmail.com</a></td>
+										   <td>12:20PM 26/04/2017</td>
+			                           </tr>
+									   <tr data-status="approved">
+			                               <td align="center"><input type="checkbox" class="checkthis"/></td>
+			                               <td align="center">
+			                                   <a class="btn btn-success"><span class="glyphicon glyphicon-check"
+			                                                                    aria-hidden="true"></span></a>
+			                                   <a class="btn btn-danger"><span class="glyphicon glyphicon-trash"
+			                                                                   aria-hidden="true"></span></a>
+			                               </td>
+										   <td><a href="#">Nguyễn Văn J</a></td>
+										   <td><a href="mailto:nvj@gmail.com">nvj@gmail.com</a></td>
+										   <td>12:15PM 26/04/2017</td>
+			                           </tr>
+			                           </tbody>
+									   <tr data-status="approved">
+			                               <td align="center"><input type="checkbox" class="checkthis"/></td>
+			                               <td align="center">
+			                                   <a class="btn btn-success"><span class="glyphicon glyphicon-check"
+			                                                                    aria-hidden="true"></span></a>
+			                                   <a class="btn btn-danger"><span class="glyphicon glyphicon-trash"
+			                                                                   aria-hidden="true"></span></a>
+			                               </td>
+										   <td><a href="#">Huỳnh Minh Chương</a></td>
+										   <td><a href="mailto:hmchuong@gmail.com">hmchuong@gmail.com</a></td>
+										   <td>12:15PM 14/04/2017</td>
+			                           </tr>
+			                           </tbody>
+									   <tr data-status="approved">
+			                               <td align="center"><input type="checkbox" class="checkthis"/></td>
+			                               <td align="center">
+			                                   <a class="btn btn-success"><span class="glyphicon glyphicon-check"
+			                                                                    aria-hidden="true"></span></a>
+			                                   <a class="btn btn-danger"><span class="glyphicon glyphicon-trash"
+			                                                                   aria-hidden="true"></span></a>
+			                               </td>
+										   <td><a href="#">Mai Thành Hiệp</a></td>
+										   <td><a href="mailto:mthiep@gmail.com">mthiep@gmail.com</a></td>
+										   <td>12:15PM 13/04/2017</td>
+			                           </tr>
+			                           </tbody>
+									   <tr data-status="approved">
+			                               <td align="center"><input type="checkbox" class="checkthis"/></td>
+			                               <td align="center">
+			                                   <a class="btn btn-success"><span class="glyphicon glyphicon-check"
+			                                                                    aria-hidden="true"></span></a>
+			                                   <a class="btn btn-danger"><span class="glyphicon glyphicon-trash"
+			                                                                   aria-hidden="true"></span></a>
+			                               </td>
+										   <td><a href="#">Nguyễn Trung Hiếu</a></td>
+										   <td><a href="mailto:nthieu@gmail.com">nthieu@gmail.com</a></td>
+										   <td>12:15PM 10/04/2017</td>
+			                           </tr>
+			                           </tbody>
+			                       </table>
+
+			                   </div>
+			                   <div class="panel-footer">
+			                       <div class="row">
+			                           <div class="col col-xs-offset-3 col-xs-6">
+			                               <nav aria-label="Page navigation" class="text-center">
+			                                   <ul class="pagination">
+			                                       <li>
+			                                           <a href="#" aria-label="Previous">
+			                                               <span aria-hidden="true">«</span>
+			                                           </a>
+			                                       </li>
+			                                       <li class="active"><a href="#">1</a></li>
+			                                       <li><a href="#">2</a></li>
+			                                       <li><a href="#">3</a></li>
+			                                       <li>
+			                                           <a href="#" aria-label="Next">
+			                                               <span aria-hidden="true">»</span>
+			                                           </a>
+			                                       </li>
+			                                   </ul>
+			                               </nav>
+			                           </div>
+			                       </div>
+			                   </div>
+			               </div>
+			</div>
+		</div>
+		<!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="../js/admin_member_management.js"></script>
+	</body>
+</html>

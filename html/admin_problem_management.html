@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="Hãy để các chuyên gia của chúng tôi giải đáp các thắc mắc của bạn nhanh chóng">
+        <meta name="author" content="thacmac.vn">
+        <link rel="icon" href="../img/problem.png">
+
+        <title>ThacMac.Vn | Hệ thống hỏi và giải đáp tất cả các thắc mắc nảy sinh trong đầu của bạn</title>
+
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+	</head>
+	<body onresize="reload()">
+		<div class="header container-fluid">
+            <nav class="navbar header-wrapper navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="logo">
+                            <a href="#">
+                                <img src="../img/logo.png" alt="thacmac.vn logo">
+                            </a>
+                        </div>
+                    </div>
+                    	<div class="dropdown account navbar-right col-xs-12 col-sm-3 col-md-2 col-lg-2">
+	                        <div class="avatar">
+	                            <img src="../img/admin.png" alt="avatar">
+	                        </div>
+	                        <a class="username dropdown-toggle" data-toggle="dropdown" href="#">Admin<b class="caret"></b></a>
+	                        <ul class="dropdown-menu col-xs-12 col-sm-12 col-md-12">
+	                            <li><a href="#">Cài đặt</a></li>
+	                            <li class="divider"></li>
+	                            <li><a href="#"><i class="fa fa-fw fa-power-off text-danger" style="margin-right: 10px;"></i>Đăng xuất</a></li>
+	                        </ul>
+	                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Quản lý bài viết</a></li>
+                            <li><a href="admin_member_management.html">Quản lý thành viên</a></li>
+                            <li><a href="admin_credit_management.html">Quản lý giao dịch</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+
+                </div><!--/.container-fluid -->
+
+
+            </nav>
+		</div>
+		<div class="wrapper container-fluid">
+			<div class="box col-md-12 col-lg-8 col-sm-12 col-xs-12">
+				<div id="problems-chart" style="height: 300px;"></div>
+				<div class="chart-title">Số lượng bài đăng</div>
+			</div>
+			<div class="box col-md-12 col-lg-4 col-sm-12 col-xs-12">
+				<div id="category-chart" style="height: 300px;"></div>
+				<div class="chart-title">Bài đăng theo chuyên mục</div>
+			</div>
+
+			<div class="box col-md-12 col-lg-12 col-sm-12 col-xs-12 box-table-problems">
+				<div class="table-title">
+					Các bài viết cần kiểm duyệt
+				</div>
+				<div class="form-group pull-right">
+				    <input type="text" class="admin-search-problem form-control" placeholder="Tìm kiếm">
+				</div>
+				<span class="counter pull-right"></span>
+				<table class="table results" id="admin-problem-table">
+					<thead>
+						<tr>
+							<th>Tiêu đề</th>
+							<th>Thời gian cập nhật</th>
+							<th>Người đăng</th>
+							<th>Hành động</th>
+						</tr>
+						<tr class="warning no-result">
+							<td colspan="4"><i class="fa fa-warning"></i> No result</td>
+					    </tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><a href="#">Debug giúp lỗi trong lập trình android</a></td>
+							<td>12:00PM 25/04/2017</td>
+							<td>Chương Huỳnh</td>
+							<td><button type="button" class="btn btn-success">Duyệt</button></td>
+						</tr>
+						<tr>
+							<td><a href="#">Tìm người hướng dẫn thực hiện website</a></td>
+							<td>11:55AM 25/04/2015</td>
+							<td>Hiếu Nguyễn</td>
+							<td><button type="button" class="btn btn-success">Duyệt</button></td>
+						</tr>
+						<tr>
+							<td><a href="#">Hướng dẫn làm đồ án lập trình mạng</a></td>
+							<td>11:50AM 25/04/2015</td>
+							<td>Hiệp Mai</td>
+							<td><button type="button" class="btn btn-success">Duyệt</button></td>
+						</tr>
+						<tr>
+							<td><a href="#">Tìm người dạy iOS nhanh chóng</a></td>
+							<td>11:45AM 25/04/2015</td>
+							<td>Chương Huỳnh</td>
+							<td><button type="button" class="btn btn-success">Duyệt</button></td>
+						</tr>
+						<tr>
+							<td><a href="#">Debug giúp lỗi trong lập trình android</a></td>
+							<td>11:40AM 25/04/2017</td>
+							<td>Chương Huỳnh</td>
+							<td><button type="button" class="btn btn-success">Duyệt</button></td>
+						</tr>
+						<tr>
+							<td><a href="#">Tìm người hướng dẫn thực hiện website</a></td>
+							<td>11:35AM 25/04/2015</td>
+							<td>Hiếu Nguyễn</td>
+							<td><button type="button" class="btn btn-success">Duyệt</button></td>
+						</tr>
+						<tr>
+							<td><a href="#">Hướng dẫn làm đồ án lập trình mạng</a></td>
+							<td>11:30AM 25/04/2015</td>
+							<td>Hiệp Mai</td>
+							<td><button type="button" class="btn btn-success">Duyệt</button></td>
+						</tr>
+						<tr>
+							<td><a href="#">Tìm người dạy iOS nhanh chóng</a></td>
+							<td>11:25AM 25/04/2015</td>
+							<td>Chương Huỳnh</td>
+							<td><button type="button" class="btn btn-success">Duyệt</button></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="../js/admin_problem_management.js"></script>
+		<!--Css for chart-->
+		<style media="screen">
+			svg text{
+				font-weight: normal !important;
+			}
+		</style>
+	</body>
+</html>
