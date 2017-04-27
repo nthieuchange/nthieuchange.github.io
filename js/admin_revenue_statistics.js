@@ -2,8 +2,6 @@ $(document).ready(function() {
 
    /* admin_revenue_statistics.html*/
    // Show charts
-   $.getScript('http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js', function() {
-       $.getScript('http://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.0/morris.min.js', function() {
            Morris.Line({
                element: 'revenue-statistics-chart',
                data: [{
@@ -49,8 +47,6 @@ $(document).ready(function() {
                resize: true,
                lineColors: ['green']
            });
-       });
-   });
    // Show problems table
    $(".admin-search-revenue-credit").keyup(function() {
        var searchTerm = $(".admin-search-revenue-credit").val();
