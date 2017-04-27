@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="Hãy để các chuyên gia của chúng tôi giải đáp các thắc mắc của bạn nhanh chóng">
+        <meta name="author" content="thacmac.vn">
+        <link rel="icon" href="../img/problem.png">
+
+        <title>ThacMac.Vn | Hệ thống hỏi và giải đáp tất cả các thắc mắc nảy sinh trong đầu của bạn</title>
+
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+	</head>
+	<body>
+		<div class="header container-fluid">
+            <nav class="navbar header-wrapper navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="logo">
+                            <a href="#">
+                                <img src="../img/logo.png" alt="thacmac.vn logo">
+                            </a>
+                        </div>
+                    </div>
+                    	<div class="dropdown account navbar-right col-xs-12 col-sm-3 col-md-2 col-lg-2">
+	                        <div class="avatar">
+	                            <img src="../img/hiepmt.jpg" alt="avatar">
+	                        </div>
+	                        <a class="username dropdown-toggle" data-toggle="dropdown" href="#">Mai Thành Hiệp <b class="caret"></b></a>
+	                        <a class="credit" href="#">300 Credit</a>
+	                        <ul class="dropdown-menu col-xs-12 col-sm-12 col-md-12">
+	                            <li><a href="#">Hồ sơ</a></li>
+	                            <li><a href="#">Cài đặt</a></li>
+	                            <li><a href="#">Nhận hỗ trợ</a></li>
+	                            <li><a href="#">Mời bạn bè</a></li>
+	                            <li class="divider"></li>
+	                            <li><a href="#"><i class="fa fa-fw fa-power-off text-danger" style="margin-right: 10px;"></i>Đăng xuất</a></li>
+	                        </ul>
+	                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Các thắc mắc</a></li>
+                            <li><a href="#">Thuê chuyên gia</a></li>
+                            <li><a href="#">Thắc mắc của tôi</a></li>
+                            <li class="nav-post-problem"><a href="#">Đăng thắc mắc</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+
+                </div><!--/.container-fluid -->
+
+
+            </nav>
+		</div>
+		<div class="wrapper container-fluid">
+            <section class="post-problem">
+                <div class="post-problem-body">
+                    <form class="post-problem-form" method="post" enctype="multipart/form-data">
+                        <ol class="">
+                            <li>
+                                <fieldset>
+                                    <legend>Thắc mắc của bạn thuộc lĩnh vực nào?</legend>
+                                    <div class="">
+                                        <label for="problem-category">Hãy chọn chuyên mục thắc mắc</label>
+                                        <select id="problem-category" name="problem-category" class="large-input">
+                                            <option disabled="disabled" selected="selected">- Thuộc lĩnh vực -</option>
+                                            <optgroup label="Giải đáp môn học">
+                                                <option value="0">Tin học</option>
+                                                <option value="0">Toán</option>
+                                                <option value="0">Lý</option>
+                                                <option value="0">Hóa</option>
+                                                <option value="0">Sinh</option>
+                                                <option value="0">Ngoại ngữ</option>
+                                                <option value="0">Địa lý</option>
+                                                <option value="0">Lịch sử</option>
+                                                <option value="0">Khác</option>
+                                            </optgroup>
+                                            <optgroup label="Giải đáp chuyên ngành">
+                                                <option value="0">Công nghệ thông tin</option>
+                                                <option value="0">Cơ khí - điện tử</option>
+                                                <option value="0">Khoa học tự nhiên</option>
+                                                <option value="0">Khoa học xã hội</option>
+                                                <option value="0">Y - dược</option>
+                                                <option value="0">Kinh tế - tài chính</option>
+                                                <option value="0">Hành chính</option>
+                                                <option value="0">Khác</option>
+                                            </optgroup>
+                                            <optgroup label="Lập trình">
+                                                <option value="0">Dạy lập trình</option>
+                                                <option value="0">Debug lỗi</option>
+                                                <option value="0">Viết phần mềm</option>
+                                                <option value="0">Tư vấn - Giải đáp</option>
+                                                <option value="0">Khác</option>
+                                            </optgroup>
+                                            <optgroup label="Tin học ứng dụng">
+                                                <option value="0">Word</option>
+                                                <option value="0">Excel</option>
+                                                <option value="0">Powerpoint</option>
+                                                <option value="0">Access</option>
+                                                <option value="0">Google</option>
+                                                <option value="0">Khác</option>
+                                            </optgroup>
+                                            <optgroup label="Ngoại ngữ">
+                                                <option value="0">Anh</option>
+                                                <option value="0">Nhật</option>
+                                                <option value="0">Trung</option>
+                                                <option value="0">Pháp</option>
+                                                <option value="0">Hàn</option>
+                                                <option value="0">Nga</option>
+                                                <option value="0">Khác</option>
+                                            </optgroup>
+                                            <optgroup label="Sửa máy tính">
+                                                <option value="0">Cài phần mềm</option>
+                                                <option value="0">Diệt virus</option>
+                                                <option value="0">Khác</option>
+                                            </optgroup>
+                                            <optgroup label="Thiết kế">
+                                                <option value="0">Dạy thiết kế</option>
+                                                <option value="0">Thuê thiết kế</option>
+                                                <option value="0">Tư vấn - Giải đáp</option>
+                                                <option value="0">Khác</option>
+                                            </optgroup>
+                                            <option value="0">Lĩnh vực khác</option>
+                                        </select>
+                                    </div>
+                                    <div class="">
+                                        <label for="problem-title">Đặt tiêu đề thắc mắc</label>
+                                        <input id="problem-title" name="problem-title" placeholder="Vd: Debug không load được ảnh trong Android">
+                                    </div>
+                                </fieldset>
+                            </li>
+                            <li>
+                                <fieldset>
+                                    <legend>Chi tiết thắc mắc của bạn</legend>
+                                    <div class="">
+                                        <label for="problem-detail">Mô tả thắc mắc</label>
+                                        <textarea id="problem-detail" placeholder="Mô tả thắc mắc của bạn tại đây..."></textarea>
+                                    </div>
+                                </fieldset>
+                            </li>
+                            <li>Yêu cầu chuyên gia</li>
+                            <li>Ngân sách dự kiến</li>
+                            <li>Tùy chọn ẩn danh</li>
+                            <li>Mua thêm gói nổi bật</li>
+                        </ol>
+                    </form>
+                </div>
+            </section>
+        </div>
+		<div class="add-footer"></div>
+
+		<!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="../js/script.js"></script>
+	</body>
+</html>
