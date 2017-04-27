@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="Hãy để các chuyên gia của chúng tôi giải đáp các thắc mắc của bạn nhanh chóng">
+        <meta name="author" content="thacmac.vn">
+        <link rel="icon" href="./img/problem.png">
+
+        <title>ThacMac.Vn | Đăng nhập vào hệ thống</title>
+
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+	</head>
+	<body>
+		<div class="header container-fluid">
+            <nav class="navbar header-wrapper navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="logo">
+                            <a href="#">
+                                <img src="./img/logo.png" alt="thacmac.vn logo">
+                            </a>
+                        </div>
+                    </div>
+                    	<div class="dropdown account navbar-right col-xs-12 col-sm-3 col-md-2 col-lg-2">
+                            <ul>
+                                <li class="li-signUp-signIn"><a href="./html/guest_register.html">Đăng ký</a></li>
+                                <li class="separator">|</li>
+                                <li>
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Đăng nhập <b class="caret"></b></a>
+                                    <ul class="dropdown-menu col-xs-12 col-sm-12 col-md-12">
+                                        <form method="post" action="" class="dropdown-menu-signIn form login-form login-form-ajax">
+                                            <div class="alert alert-warning" style="">
+                                                <p>Email không chính xác!</p>
+                                            </div>
+                                            <div class="form-group"><input type="email" class="form-control email" placeholder="Email"></div>
+                                            <div class="form-group"><input type="password" class="form-control password" placeholder="Mật khẩu"></div>
+                                            <div class="form-group">
+                                                <div>
+                                                    <label class="checkbox-inline checkbox-styled checkbox-primary lh-1-5">
+                                                        <input type="checkbox" value="1" class="remember" id="remember"><span>Duy trì đăng nhập</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group pad-0-top mar-0-top">
+                                                <a href="./html/guest_forget_password.html">Quên mật khẩu?</a>
+                                            </div>
+                                            <button type="button" class="btn btn-raised btn-success btn-block" data-loading-text="<i class='fa fa-spinner fa-spin'></i> Loading.." onclick="login_ajax_submit(this);return false;">Đăng nhập</button>
+                                            <div class="divider"></div>
+                                            <div class="text-center login-social">
+                                                <a href="javascript:void(0)" class="btn-social-login" data-provider="facebook" title="Đăng nhập bằng tài khoản Facebook"><img src="./img/icon-fb-circle.png" alt="Facebook icon"></a>
+                                                <a href="javascript:void(0)" class="btn-social-login" data-provider="google"  title="Đăng nhập bằng tài khoản Google"><img src="./img/icon-gg-circle.png" alt="Google plus icon"></a>
+                                            </div>
+                                        </form>
+                                    </ul>
+                                </li>
+                            </ul>
+	                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Các thắc mắc</a></li>
+                            <li><a href="#">Thuê chuyên gia</a></li>
+                            <li><a href="#">Thắc mắc của tôi</a></li>
+                            <li class="nav-post-problem"><a href="#">Đăng thắc mắc</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+
+                </div><!--/.container-fluid -->
+
+
+            </nav>
+		</div>
+		<div class="wrapper container-fluid">
+            <div class="wrapper-signUp">
+                <div class="container">
+                    <form class="form-sign-up well form-horizontal" action=" " method="post"  id="contact_form">
+                        <fieldset>
+                            <!-- Form Name -->
+                            <div class="title">
+                                <h2>Đăng nhập vào hệ thống</h2>
+                            </div>
+
+                            <div class="hr"></div>
+
+                            <!-- Register with Social Account -->
+                            <div class="login-social-network">
+                                <a class="btn btn-facebook"><i class="fa fa-facebook" aria-hidden="true"></i>Đăng nhập bằng tài khoản Facebook</a>
+                                <a class="btn btn-google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i>Đăng nhập bằng tài khoản Google</a>
+                            </div>
+                            <div class="hr">
+                                <span class="inner">Hoặc</span>
+                            </div>
+
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Email</label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                        <input name="email" placeholder="Địa chỉ email" class="form-control" type="email">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Text input-->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" >Mật khẩu</label>
+                                <div class="col-md-4 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input name="password" placeholder="Mật khẩu" class="form-control" type="password">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Success message -->
+                            <!--<div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>-->
+                            <!-- Button -->
+                            <div class="form-group">
+                                <label class="col-md-4 control-label"></label>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn btn-warning center-block">Đăng nhập <span class="glyphicon glyphicon-send"></span></button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div><!-- /.container -->
+            </div>
+		</div>
+		<div class="add-footer"></div>
+
+		<!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="./js/script.js"></script>
+	</body>
+</html>
