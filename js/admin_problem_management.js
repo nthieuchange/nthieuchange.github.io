@@ -1,7 +1,5 @@
 $(document).ready(function(){
     // Show charts
-    $.getScript('http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js', function() {
-        $.getScript('http://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.0/morris.min.js', function() {
             Morris.Line({
                 element: 'problems-chart',
                 data: [{
@@ -52,8 +50,6 @@ $(document).ready(function(){
                 resize: true,
                 colors: ['red','green','blue','yellow','purple','brown','gray']
             });
-        });
-    });
     // Show problems table
     $(".admin-search-problem").keyup(function() {
         var searchTerm = $(".admin-search-problem").val();
@@ -84,29 +80,3 @@ $(document).ready(function(){
         }
     });
 });
-
-function reload(){
-    $('#problems-chart').empty();
-    Morris.Line({
-        element: 'problems-chart',
-        data: [{
-            period: '2017-04-20',
-            problems: 120
-        }, {
-            period: '2017-04-21',
-            problems: 100
-        }, {
-            period: '2017-04-22',
-            problems: 95
-        }, {
-            period: '2017-04-23',
-            problems: 130
-        }, {
-            period: '2017-04-24',
-            problems: 160
-        }],
-        xkey: 'period',
-        ykeys: ['problems'],
-        labels: ['Bài viết']
-    });
-}
