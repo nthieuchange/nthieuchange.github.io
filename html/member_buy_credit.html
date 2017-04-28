@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="Hãy để các chuyên gia của chúng tôi giải đáp các thắc mắc của bạn nhanh chóng">
+        <meta name="author" content="thacmac.vn">
+        <link rel="icon" href="../img/problem.png">
+
+        <title>ThacMac.Vn | Hệ thống hỏi và giải đáp tất cả các thắc mắc nảy sinh trong đầu của bạn</title>
+
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+	</head>
+	<body>
+		<div class="header container-fluid">
+            <nav class="navbar header-wrapper navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="logo">
+                            <a href="#">
+                                <img src="../img/logo.png" alt="thacmac.vn logo">
+                            </a>
+                        </div>
+                    </div>
+                    	<div class="dropdown account navbar-right col-xs-12 col-sm-3 col-md-2 col-lg-2">
+	                        <div class="avatar">
+	                            <img src="../img/hiepmt.jpg" alt="avatar">
+	                        </div>
+	                        <a class="username dropdown-toggle" data-toggle="dropdown" href="#">Mai Thành Hiệp <b class="caret"></b></a>
+	                        <a class="credit" href="#">300 Credit</a>
+	                        <ul class="dropdown-menu col-xs-12 col-sm-12 col-md-12">
+	                            <li><a href="#">Hồ sơ</a></li>
+	                            <li><a href="#">Cài đặt</a></li>
+	                            <li><a href="#">Nhận hỗ trợ</a></li>
+	                            <li><a href="#">Mời bạn bè</a></li>
+	                            <li class="divider"></li>
+	                            <li><a href="#"><i class="fa fa-fw fa-power-off text-danger" style="margin-right: 10px;"></i>Đăng xuất</a></li>
+	                        </ul>
+	                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Các thắc mắc</a></li>
+                            <li><a href="#">Thuê chuyên gia</a></li>
+                            <li><a href="#">Thắc mắc của tôi</a></li>
+                            <li class="nav-post-problem"><a href="#">Đăng thắc mắc</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+
+                </div><!--/.container-fluid -->
+
+
+            </nav>
+		</div>
+		<div class="wrapper container-fluid">
+            <section class="wrapper-buy-credit">
+                <div class="row-fluid inner-content">
+                    <h2>Mua Credit</h2>
+                    <hr>
+                    <form id="buyCredit" class="buy-credit-form">
+                        <h4>Bước 1: Chọn gói Credit</h4>
+                        <p>Credit không có hạn sử dụng. Vì vậy, càng mua nhiều bạn sẽ càng tiết kiệm được nhiều.</p>
+                        <div class="credit-packages row-fluid">
+                            <label class="radio">
+                                <input type="radio" name="buyCreditPackage" id="package1" value="50">
+                                <b>50.000</b> VNĐ = <b>3</b> Credit
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="buyCreditPackage" id="package6" value="100">
+                                <b>100.000</b> VNĐ = <b>6</b> Credit
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="buyCreditPackage" id="package2" value="200">
+                                <b>200.000</b> VNĐ = <b>15</b> Credit
+                                <span><i>(13.333 VNĐ/Credit)</i><span class="label-tag label-orange">TIẾT KIỆM 20%</span></span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="buyCreditPackage" id="package3" value="500" checked="checked">
+                                <b>500.000</b> VNĐ = <b>50</b> Credit
+                                <span><i>(10.000 VNĐ/Credit)</i><span class="label-tag label-blue">TIẾT KIỆM 40%</span></span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="buyCreditPackage" id="package4" value="1000">
+                                <b>1.000.000</b> VNĐ = <b>120</b> Credit<span><i>(8.333 VNĐ/Credit)</i><span class="label-tag label-blue">TIẾT KIỆM 50%</span></span>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="buyCreditPackage" id="package5" value="2000">
+                                <b>2.000.000</b> VNĐ = <b>300</b> Credit<span><i>(6.667 VNĐ/Credit)</i><span class="label-tag label-green">TIẾT KIỆM 60%</span></span>
+                            </label>
+                        </div>
+                        <p><br></p>
+                        <h4>Bước 2: Thanh toán qua Paypal</h4>
+                        <div class="payment-methods row-fluid">
+                            <form method="post">
+                                <input type="text" value="500000" readonly="readonly" id="pay-money" name="money" title="Số tiền cần thanh toán">
+                                <span class="unit">VNĐ</span>
+                                <button type="submit" class="btn btn-primary">Thanh toán</button>
+                            </form>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+		<div class="add-footer"></div>
+
+		<!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="../js/member_buy_credit.js"></script>
+	</body>
+</html>

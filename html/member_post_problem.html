@@ -69,7 +69,7 @@
                             <li>
                                 <fieldset>
                                     <legend>Thắc mắc của bạn thuộc lĩnh vực nào?</legend>
-                                    <div class="">
+                                    <div class="problem-field">
                                         <label for="problem-category">Hãy chọn chuyên mục thắc mắc</label>
                                         <select id="problem-category" name="problem-category" class="large-input">
                                             <option disabled="disabled" selected="selected">- Thuộc lĩnh vực -</option>
@@ -132,7 +132,7 @@
                                             <option value="0">Lĩnh vực khác</option>
                                         </select>
                                     </div>
-                                    <div class="">
+                                    <div class="problem-field">
                                         <label for="problem-title">Đặt tiêu đề thắc mắc</label>
                                         <input id="problem-title" name="problem-title" placeholder="Vd: Debug không load được ảnh trong Android">
                                     </div>
@@ -141,17 +141,138 @@
                             <li>
                                 <fieldset>
                                     <legend>Chi tiết thắc mắc của bạn</legend>
-                                    <div class="">
+                                    <div class="problem-field">
                                         <label for="problem-detail">Mô tả thắc mắc</label>
                                         <textarea id="problem-detail" placeholder="Mô tả thắc mắc của bạn tại đây..."></textarea>
                                     </div>
+                                    <div class="problem-field">
+                                        <label for="problem-skills">Kỹ năng phù hợp</label>
+                                        <input id="problem-skills" type="text" placeholder="Vd: Java, Android...">
+                                    </div>
+                                    <div class="problem-field">
+                                        <label>Đính kèm tập tin</label>
+                                        <div id="fileupload-container" class="file-uploader-area">
+                                            <span class="btn btn-plain btn-file-uploader">
+                                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                                <span id="file-upload-button-text">Tải tập tin lên</span>
+                                                <input type="file" name="upload[]" multiple="" class="fileupload-input">
+                                                <input type="hidden" name="fileset" class="upload-fileset">
+                                            </span>
+                                            <p class="file-upload-text">Kéo &amp; thả bất kì hình ảnh, tài liệu mà nó giúp bạn mô tả thắc mắc được rõ ràng hơn tại đây</p>
+                                        </div>
+                                    </div>
+                                    <div class="problem-field">
+                                        <label for="problem-deadline">Hạn nhận chào giá</label>
+                                        <input type="date" id="problem-deadline">
+                                    </div>
                                 </fieldset>
                             </li>
-                            <li>Yêu cầu chuyên gia</li>
-                            <li>Ngân sách dự kiến</li>
-                            <li>Tùy chọn ẩn danh</li>
-                            <li>Mua thêm gói nổi bật</li>
+                            <li>
+                                <fieldset>
+                                    <legend>Yêu cầu chuyên gia</legend>
+                                    <div class="problem-field">
+                                        <label for="problem-detail">Thuê chuyên gia tại</label>
+                                        <select id="problem-location" title="">
+                                            <option value="0">Toàn Quốc</option>
+                                            <option value="31">Hồ Chí Minh</option>
+                                            <option value="24">Hà Nội</option>
+                                            <option value="15">Đà Nẵng</option>
+                                            <option value="27">Hải Phòng</option>
+                                            <option value="14">Cần Thơ</option>
+                                            <option value="1">An Giang</option>
+                                            <option value="2">Bà Rịa - Vũng Tàu</option>
+                                            <option value="5">Bắc Giang</option>
+                                            <option value="4">Bắc Kạn</option>
+                                            <option value="3">Bạc Liêu</option>
+                                            <option value="6">Bắc Ninh</option>
+                                            <option value="7">Bến Tre</option>
+                                            <option value="8">Bình Dương</option>
+                                            <option value="9">Bình Định</option>
+                                            <option value="10">Bình Phước</option>
+                                            <option value="11">Bình Thuận</option>
+                                            <option value="12">Cà Mau</option>
+                                            <option value="13">Cao Bằng</option>
+                                            <option value="16">Đắk Lắk</option>
+                                            <option value="17">Đắk Nông</option>
+                                            <option value="20">Điện Biên</option>
+                                            <option value="18">Đồng Nai</option>
+                                            <option value="19">Đồng Tháp</option>
+                                            <option value="21">Gia Lai</option>
+                                            <option value="22">Hà Giang</option>
+                                            <option value="23">Hà Nam</option>
+                                            <option value="25">Hà Tĩnh</option>
+                                            <option value="26">Hải Dương</option>
+                                            <option value="29">Hậu Giang</option>
+                                            <option value="28">Hòa Bình</option>
+                                            <option value="30">Hưng Yên</option>
+                                            <option value="32">Khánh Hòa</option>
+                                            <option value="33">Kiên Giang</option>
+                                            <option value="34">Kon Tum</option>
+                                            <option value="35">Lai Châu</option>
+                                            <option value="38">Lâm Đồng</option>
+                                            <option value="37">Lạng Sơn</option>
+                                            <option value="36">Lào Cai</option>
+                                            <option value="39">Long An</option>
+                                            <option value="40">Nam Định</option>
+                                            <option value="41">Nghệ An</option>
+                                            <option value="42">Ninh Bình</option>
+                                            <option value="43">Ninh Thuận</option>
+                                            <option value="44">Phú Thọ</option>
+                                            <option value="45">Phú Yên</option>
+                                            <option value="46">Quảng Bình</option>
+                                            <option value="47">Quảng Nam</option>
+                                            <option value="48">Quảng Ngãi</option>
+                                            <option value="49">Quảng Ninh</option>
+                                            <option value="50">Quảng Trị</option>
+                                            <option value="51">Sóc Trăng</option>
+                                            <option value="52">Sơn La</option>
+                                            <option value="53">Tây Ninh</option>
+                                            <option value="54">Thái Bình</option>
+                                            <option value="55">Thái Nguyên</option>
+                                            <option value="56">Thanh Hóa</option>
+                                            <option value="57">Thừa Thiên - Huế</option>
+                                            <option value="58">Tiền Giang</option>
+                                            <option value="59">Trà Vinh</option>
+                                            <option value="60">Tuyên Quang</option>
+                                            <option value="61">Vĩnh Long</option>
+                                            <option value="62">Vĩnh Phúc</option>
+                                            <option value="63">Yên Bái</option>
+                                        </select>
+                                    </div>
+                                </fieldset>
+                            </li>
+                            <li>
+                                <fieldset>
+                                    <legend>Ngân sách dự kiến</legend>
+                                    <div class="problem-field">
+                                        <label for="problem-budget">Số tiền tối đa có thể chi trả</label>
+                                        <input id="problem-budget" placeholder="Vd: 2000,000">
+                                    </div>
+                                </fieldset>
+                            </li>
+                            <li>
+                                <fieldset>
+                                    <legend>Tùy chọn ẩn danh</legend>
+                                    <div class="problem-field">
+                                        <label class="lb-checkbox"><input type="checkbox" value="1" id="is-private">Đăng thắc mắc bí mật không hiển thị công khai trên danh sách thắc mắc</label>
+                                    </div>
+                                </fieldset>
+                            </li>
+                            <li>
+                                <fieldset>
+                                    <legend>Mua thêm gói nổi bật</legend>
+                                    <div class="problem-field">
+                                        <label class="lb-checkbox"><input type="checkbox" value="1" id="is-special-1" name="is-special-1" title="">Nổi bật thắc mắc theo chuyên mục tương ứng (2 credit/24 hours)</label>
+                                    </div>
+                                    <div class="problem-field">
+                                        <label class="lb-checkbox"><input type="checkbox" value="1" id="is-special-2" name="is-special-2" title="">Nổi bật thắc mắc trên tất cả chuyên mục (4 credits/24 hours)</label>
+                                    </div>
+                                </fieldset>
+                            </li>
                         </ol>
+                        <p>Khi đăng thắc mắc, bạn xác nhận đồng ý các điều khoản sử dụng của thacmac.vn, và không để lộ bất kỳ
+                            thông tin liên lạc cá nhân nào trong phần mô tả nội dung thắc mắc.</p>
+                        <button type="submit" class="btn btn-success btn-block">Đăng thắc mắc ngay</button>
                     </form>
                 </div>
             </section>

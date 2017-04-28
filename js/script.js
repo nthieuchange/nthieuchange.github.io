@@ -7,7 +7,7 @@ $(document).ready(function() {
    });
 
    // Load footer
-   $(".add-footer").load("../html/footer.html");
+   $(".add-footer").load("./footer.html");
 
    // Responsive Category & Location
    ToggleLeftSide();

@@ -3,8 +3,6 @@ $(document).ready(function () {
   $(".add-footer").load("./footer.html");
 
   // Show charts
-  $.getScript('http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js', function() {
-      $.getScript('http://cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.0/morris.min.js', function() {
           var data = [
       { period: '2017-04-17', a: 10, b: 30},
       { period: '2017-04-18', a: 0,  b: 0},
@@ -41,8 +39,6 @@ Morris.Line(config);
               resize: true,
               colors: ['green','red']
           });
-      });
-  });
   // Show problems table
   $(".admin-search-problem").keyup(function() {
       var searchTerm = $(".admin-search-problem").val();

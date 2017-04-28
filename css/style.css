@@ -1213,7 +1213,6 @@ input.form-control:focus {
 /*
  admin_member_management.html
 */
-
 .btn-group .btn {
     transition: background-color .3s ease;
 }
@@ -1297,7 +1296,7 @@ input.form-control:focus {
   }
 }
  /* End admin_revenue_statistics.html*/
- 
+
  /* Start member_spending_statistics_credit*/
 @media (max-width: 342px) {
   .box-table-member-history-spending-credit{
@@ -1341,7 +1340,7 @@ input.form-control:focus {
 
 .login-social-network .btn {
     padding: 11px 38px 8px 38px;
-    width: 350px;
+    width: 100%; 
     color: #fff;
     border-radius: 22px;
     font-weight: 400;
@@ -1426,17 +1425,60 @@ input.form-control:focus {
 }
 
 /* Post Problem Layout */
-.post-problem legend {
-    margin-bottom: 22px;
+.post-problem-form {
+    margin: 10px auto;
+    max-width: 600px;
+}
+
+.post-problem-form>ol>li {
+    margin: 30px auto;
+}
+
+.post-problem-form legend {
     font-size: 24px;
     line-height: 1.33;
     font-weight: bold;
 }
 
+.post-problem textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.post-problem-form select, .post-problem-form input {
+    font-size: 14px;
+    height: 42px;
+    width: 100%;
+    padding: 10px;
+}
+
+.post-problem-form label.lb-checkbox {
+    font-weight: 500;
+}
+
+.post-problem-form input[type=checkbox] {
+    width: 14px;
+    padding: 0;
+    margin: 4px 10px 4px 0;
+    height: 14px;
+}
+
+.post-problem-form label {
+    display: block;
+}
+
+.post-problem-form>ol>li {
+    position: relative;
+    list-style: none;
+    counter-increment: li;
+}
+
 .post-problem-form>ol>li::before {
     position: absolute;
-    top: -3px;
-    left: 0;
+    top: 0;
+    left: -50px;
     content: counter(li);
     display: inline-block;
     width: 30px;
@@ -1446,5 +1488,324 @@ input.form-control:focus {
     font-weight: 700;
     text-align: center;
     color: #fff;
-    background: #29b2fe;
+    background: #449d44;
+}
+
+.post-problem-form .file-uploader-area {
+    display: table;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    padding: 20px 15px;
+    border: 1px dashed #BEC0C2;;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    border-radius: 3px 3px 3px 3px;
+    background-clip: padding-box;
+}
+
+.file-uploader-area .btn.btn-plain, .file-uploader-area .btn.btn-plain-alt {
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.file-uploader-area .btn-plain {
+    border: 1px solid #75787d;
+    font-weight: 700;
+    color: #4D525B;
+    background: -webkit-linear-gradient(top,transparent 0,transparent 100%);
+    background: linear-gradient(to bottom,transparent 0,transparent 100%);
+    text-shadow: 0 -1px transparent;
+}
+
+.post-problem-form .file-uploader-area {
+
+}
+
+.post-problem .problem-field {
+    margin-bottom: 15px;
+}
+
+.file-uploader-area .btn {
+    border: 1px solid #BEC0C2;
+    font-weight: 700;
+    color: #4D525B;
+    background: -webkit-linear-gradient(top,#fff 0,#F0F0F0 100%);
+    background: linear-gradient(to bottom,#fff 0,#F0F0F0 100%);
+    text-shadow: 0 -1px transparent;
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 3px;
+    -webkit-font-smoothing: antialiased;
+    line-height: 18px;
+    text-align: center;
+    background-clip: border-box;
+    cursor: pointer;
+}
+
+.post-problem-form .btn-file-uploader {
+    display: table-cell;
+    vertical-align: middle;
+    width: 40%;
+}
+
+.post-problem-form .file-uploader-area input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    border: solid transparent;
+    cursor: pointer;
+    opacity: 0;
+    height: 100%;
+}
+
+.post-problem-form .file-uploader-area .file-upload-text {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 20px;
+    color: #1f2836;
+}
+
+/* Buy Credit Layout */
+.wrapper-buy-credit {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.buy-credit-form h4{
+    font-style: normal;
+}
+
+.buy-credit-form .label-tag {
+    margin-left: 10px;
+    font-size: 11px;
+    font-weight: bold;
+    background: #f76d22;
+    color: #FFF;
+    font-family: 'Open Sans',sans-serif;
+    padding: 1px 4px 0 4px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 14px;
+}
+
+.buy-credit-form .label-orange {
+    background-color: #f76d22;
+}
+
+.buy-credit-form .label-blue {
+    background-color: #00abd2;
+}
+
+.buy-credit-form .label-green {
+    background-color: #14d76e;
+}
+
+.buy-credit-form #pay-money {
+    height: 3rem;
+    padding: 0 .85rem;
+    width: 150px;
+}
+
+.buy-credit-form .unit {
+    margin-right: 20px;
+}
+
+/* ADMIN */
+
+
+.topbar {
+	background: #2A3F54;
+	border-color: #2A3F54;
+	border-radius: 0px;
+}
+
+.topbar .navbar-header a {
+	color: #ffffff;
+}
+
+.wrapper {
+    padding-left: 0px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.sidebar {
+    z-index: 1000;
+    position: fixed;
+    top: 50px;
+    left: -50px;
+    width: 50px;
+    height: 100%;
+    overflow-y: auto;
+    background: #2A3F54;
+	color: #ffffff;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.main {
+	width: 100%;
+    position: relative;
+    padding-bottom:20px;
+}
+
+.wrapper.toggled {
+	padding-left: 50px;
+}
+
+.wrapper.toggled .sidebar {
+	left: 0;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 52px;
+    width: 50px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.sidebar-nav li {
+    line-height: 40px;
+}
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #e8e8e8;
+    padding: 0;
+    text-align:center;
+}
+
+.sidebar-nav li a:hover, .sidebar-nav li.active a {
+    text-decoration: none;
+    color: #fff;
+    background: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav li span, .subbar li span {
+	display : none;
+}
+
+nav.subbar {
+	position: relative;
+	width: 100%;
+	border-radius: 0px;
+	background: #fff;
+	margin: 50px 0 -50px 0;
+	padding: 10px 0 0 0;
+	z-index: 2;
+}
+nav.subbar > ul.nav.nav-tabs {
+	padding: 0 5px;
+}
+
+nav.subbar > ul.nav.nav-tabs > li.active > a {
+    background: #dedede;
+    border-top: 1px solid #a6a6a6;
+    border-left: 1px solid #a6a6a6;
+    border-right: 1px solid #a6a6a6;
+    border-radius: 0px;
+}
+
+.admin-content {
+    padding: 0 30px;
+}
+
+.fade .row{
+    display: none;
+}
+
+.fade.in .row{
+    display: inline;
+}
+
+@media(min-width:768px){
+	.subbar li span {
+		display: inline;
+	}
+}
+
+@media(min-width:992px) {
+    .wrapper {
+    	padding-left: 50px;
+    }
+
+    .sidebar {
+    	left: 0;
+    	width: 50px;
+	}
+
+	.wrapper.toggled {
+		padding-left: 200px;
+	}
+
+	.wrapper.toggled .sidebar, .wrapper.toggled .sidebar-nav {
+		width: 200px;
+	}
+
+	.wrapper.toggled .sidebar-nav li a {
+		text-align: left;
+		padding: 0 0 0 10px;
+	}
+
+	.wrapper.toggled .sidebar-nav li span {
+		display: inline;
+	}
+
+}
+
+.navbar-btn {
+    background: none;
+    border: none;
+    height: 35px;
+    min-width: 35px;
+    color: #fff;
+    padding-right: 10px
+}
+.navbar-text {
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+@media (min-width: 768px) {
+  .navbar-text {
+    float: left;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+#admin-nav{
+    line-height: 0;
+}
+
+#admin-logout li a:link, #admin-logout li a:visited{
+    color: #000;
+    font-weight: normal;
+}
+
+i.fa{
+    width: 20px;
+}
+
+svg{
+  width: 100% !important
 }
